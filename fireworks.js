@@ -58,7 +58,7 @@ if (this.particles[i].finished()){
   
   explode (){
     
-  for (let i=0; i<100; i++){ 
+  for (let i=0; i<numberOfParticles; i++){ 
   this.particles.push(new Particles(this.mass,this.firework.pos.x,this.firework.pos.y,this.saturation)) ;
     }
   }
