@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>fireworks</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main></main>
+   <div class="content-container">
+    <div class="content-sub-container"> 
+    <label>number of particles</label>
+    <input id="numberOfParticle" />
+    </div> 
+
+    <div class="content-container">
+      <div class="color-container"> 
+      <label for="red-value">Red</label>
+      <input id="red-value" type="range" min="0" max="255">
+      <p class="paragraph"></p>
+     </div>
+    <div class="color-container"> 
+      <label for="green">green</label>
+      <input id="green-value" type="range" min="0" max="255">
+      <p class="green-paragraph"></p>
+    </div>
+
+      <div class="color-container"> 
+      <label for="red-value">Blue</label>
+      <input id="red-value" type="range" min="0" max="255">
+    </div>
+    </div>
+   
+    <button id="submit">submit</button>
+  </div>
+    <div id="canvas-container"></div>
+
+    <script src="sketch.js"></script>
+    <script src="particles.js"></script>
+    <script src="fireworks.js"></script>
+  </body>
+</html>
