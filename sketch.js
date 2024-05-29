@@ -3,27 +3,25 @@ let fireworks=[];
 let canvas;
 const NUMBER_OF_PARTICLES_INPUT=document.querySelector ("#numberOfParticle");
 const SUBMIT=document.querySelector ("#submit");
-let paragraph=document.querySelector (".paragraph");
-let green_paragraph=document.querySelector(".green-paragraph");
-const RED_INPUT=document.querySelector ("#red-value");
-const GREEN_INPUT=document.querySelector ("#green-value");
+let background_color=document.querySelector (".backgroundColor");
+
 
 let numberOfParticles=50;
+let r=0;
+let g=0;
+let b=0;
 
-let red=10;
 
-GREEN_INPUT.addEventListener ("input", (event)=>{
-  console.log (event.target.value);
-  green_paragraph.innerHTML=event.target.value;
-  });
-
-RED_INPUT.addEventListener ("input", (event)=>{
-paragraph.innerHTML=event.target.value;
-});
 
 SUBMIT.addEventListener ("click", ()=>{
+console.log (background_color.value);
+let background_color_value=background_color.value;
+ r=parseInt(background_color_value.substr(1,2),16);
+ g=parseInt(background_color_value.substr(3,2),16);
+ b=parseInt(background_color_value.substr(5,2),16);
 
-  if(NUMBER_OF_PARTICLES_INPUT.value) {  
+console.log (b);
+if(NUMBER_OF_PARTICLES_INPUT.value) {  
 console.log (NUMBER_OF_PARTICLES_INPUT.value);
 numberOfParticles=NUMBER_OF_PARTICLES_INPUT.value;
 
@@ -39,7 +37,7 @@ canvas.parent ("canvas-container");
 
 
 function draw() {
-  background(0,0,0,25);
+  background(r,g,b,25);
   
   noStroke ();
   

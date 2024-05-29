@@ -40,13 +40,13 @@ constructor (mass,x,y,sat,firework){
   }
   show (){
     if (this.firework) {
-          fill (255,this.sat,100)
+      fill (255,this.sat,100)
 
     } else { 
-    
-    fill (red,this.sat,100,this.alpha)
+    fill (255,this.sat,100,this.alpha)
 }
-    circle (this.pos.x,this.pos.y,this.r);
+   circle (this.pos.x,this.pos.y,this.r);
+
 
   }
   

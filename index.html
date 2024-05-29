@@ -9,32 +9,21 @@
   </head>
   <body>
     <main></main>
-   <div class="content-container">
-    <div class="content-sub-container"> 
-    <label>number of particles</label>
-    <input id="numberOfParticle" />
-    </div> 
-
     <div class="content-container">
-      <div class="color-container"> 
-      <label for="red-value">Red</label>
-      <input id="red-value" type="range" min="0" max="255">
-      <p class="paragraph"></p>
-     </div>
-    <div class="color-container"> 
-      <label for="green">green</label>
-      <input id="green-value" type="range" min="0" max="255">
-      <p class="green-paragraph"></p>
+      <div class="content-sub-container">
+        <label>Number of particles</label>
+        <input id="numberOfParticle" />
+      </div>
+      <div>
+        <label for="backgroundColor">background</label>
+        <input class="backgroundColor" type="color"/>
+      </div>
+       <div>
+      <button id="submit">submit</button>
+      </div>
+
     </div>
 
-      <div class="color-container"> 
-      <label for="red-value">Blue</label>
-      <input id="red-value" type="range" min="0" max="255">
-    </div>
-    </div>
-   
-    <button id="submit">submit</button>
-  </div>
     <div id="canvas-container"></div>
 
     <script src="sketch.js"></script>
