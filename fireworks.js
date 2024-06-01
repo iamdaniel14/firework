@@ -9,11 +9,7 @@ class Fireworks {
     
   }
   
-  
-  
- 
-  
-    
+
   update (){
   if(!this.exploded) {  //if not exploded updating the firework ;
   let gravity=createVector (0,0.1);  
@@ -32,11 +28,9 @@ class Fireworks {
   let gravity=createVector (0,0.1);
   this.particles[i].applyForce(gravity);
    this.particles[i].drag_force ();
-if (this.particles[i].finished()){
+  if (this.particles[i].finished()){
   this.particles.splice (i,1);
-  
-  
-    
+   
   }
   
   }
@@ -57,11 +51,16 @@ if (this.particles[i].finished()){
   }
   
   explode (){
-    
   for (let i=0; i<numberOfParticles; i++){ 
-  this.particles.push(new Particles(this.mass,this.firework.pos.x,this.firework.pos.y,this.saturation)) ;
+  if (random(1) <0.1) { 
+   this.particles.push(new Particles(this.mass,this.firework.pos.x,this.firework.pos.y,this.saturation));
+
+   }else {
+   this.particles.push(new smallParticles(this.mass,this.firework.pos.x,this.firework.pos.y,this.saturation));
+                 }
     }
-  }
     
+  }
   
+
 }

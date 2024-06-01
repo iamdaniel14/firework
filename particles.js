@@ -39,13 +39,13 @@ constructor (mass,x,y,sat,firework){
   this.acc.add (f);
   }
   show (){
-    if (this.firework) {
-      fill (255,this.sat,100)
+  if (this.firework) {
+  fill (255,this.sat,100)
 
     } else { 
     fill (255,this.sat,100,this.alpha)
 }
-   circle (this.pos.x,this.pos.y,this.r);
+   circle (this.pos.x,this.pos.y,this.r/2);
 
 
   }
@@ -86,4 +86,19 @@ constructor (mass,x,y,sat,firework){
   }
   
   
+}
+
+
+class smallParticles extends Particles {
+  constructor (mass,x,y,sat,firework){
+
+    super (mass,x,y,sat,firework);
+  }
+
+  show (){
+
+circle (this.pos.x,this.pos.y,this.r/6);
+
+  }
+
 }

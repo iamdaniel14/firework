@@ -31,7 +31,6 @@ numberOfParticles=NUMBER_OF_PARTICLES_INPUT.value;
 function setup() {
 canvas=createCanvas(windowWidth,windowHeight);
 canvas.parent ("canvas-container");
-  
 }
 
 
@@ -42,8 +41,8 @@ function draw() {
   noStroke ();
   
   if (random (1)< 0.01) {
-    let sat=floor(random (255));
-    fireworks.push(new Fireworks(random(width),height,sat));
+  let sat=floor(random (255));
+  fireworks.push(new Fireworks(random(width),height,sat));
 
   
   }
